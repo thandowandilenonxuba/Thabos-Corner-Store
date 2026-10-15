@@ -268,3 +268,10 @@ Before submitting:
 - Ensure your GitHub repository has at least eight meaningful commits and does not contain a virtual environment.
 - Create the required ZIP file using the naming convention `Surname_Firstname_KM04-05_Project.zip`.
 
+## 13. Final Validation
+
+The application was tested by running `python main.py` from the `starter_code` directory. The test completed successfully, including password verification, data cleaning, database creation, SQL reporting, Python analysis, and chart generation.
+
+The cleaning process retained 12 product records and 43 sales records. The system generated the `revenue_per_product.png` and `monthly_trend.png` charts. SQLite foreign-key enforcement is enabled for database connections to help prevent sales records from referencing products that do not exist.
+
+The final ZIP package includes the source CSV files, Python modules, SQLite database, charts, project plan, and documentation. Before submission, the package should be checked against the LMS requirements and the student number in `SUBMISSION.txt` should be confirmed.
