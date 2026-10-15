@@ -24,7 +24,7 @@ import getpass
 # For this project, one hardcoded hash is fine — but note in your
 # README why storing it in the database (KM-04 idea) would be better
 # than hardcoding it here.
-STORED_PASSWORD_HASH = None
+
 
 
 def hash_password(plain_text_password: str) -> str:
@@ -34,7 +34,7 @@ def hash_password(plain_text_password: str) -> str:
 
     return hashlib.sha256(plain_text_password.encode()).hexdigest()
 
-STORED_PASSWORD_HASH = hash_password("letmein")
+STORED_PASSWORD_HASH = "1c8bfe8f801d79745c4631d09fff36c82aa37fc4cce4fc946683d7b336b63032"
 
 
 def check_password(attempt: str, stored_hash: str) -> bool:

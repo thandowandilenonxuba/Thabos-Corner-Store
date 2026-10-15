@@ -14,3 +14,4 @@ The workflow is to load the CSV files, clean the product and sales records, crea
 
 ## 5. Expected Outcome
 The completed system should turn inconsistent spreadsheet data into organised database records and useful reports that help Thabo understand product performance and monthly sales trends.
+
