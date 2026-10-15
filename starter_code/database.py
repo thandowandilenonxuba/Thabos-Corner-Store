@@ -27,7 +27,9 @@ def get_connection(db_path: str = "store.db") -> sqlite3.Connection:
     Returns:
         an open sqlite3.Connection
     """
-    return sqlite3.connect(db_path)
+    conn = sqlite3.connect(db_path)
+conn.execute("PRAGMA foreign_keys = ON")
+return conn
 
 
 def create_tables(conn: sqlite3.Connection) -> None:
