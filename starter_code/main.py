@@ -53,10 +53,14 @@ def main():
     print(data_cleaning.cleaning_summary(raw_products, clean_products, "products"))
     print(data_cleaning.cleaning_summary(raw_sales, clean_sales, "sales"))
 
+
     # ---- Task 3: build the database ---------------------------------
     print("\n[3/5] Building database...")
     conn = database.get_connection(DB_PATH)
     database.create_tables(conn)
+    conn.execute("DELETE FROM sales")
+    conn.execute("DELETE FROM products")
+    conn.commit()
     database.insert_products(conn, clean_products)
     database.insert_sales(conn, clean_sales)
 
