@@ -20,16 +20,15 @@ By the end of this file you must be able to:
 import sqlite3
 
 
+
 def get_connection(db_path: str = "store.db") -> sqlite3.Connection:
     """
     Open (and create, if needed) the SQLite database file.
-
-    Returns:
-        an open sqlite3.Connection
     """
     conn = sqlite3.connect(db_path)
-conn.execute("PRAGMA foreign_keys = ON")
-return conn
+    conn.execute("PRAGMA foreign_keys = ON")
+    return conn
+
 
 
 def create_tables(conn: sqlite3.Connection) -> None:
