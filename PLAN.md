@@ -14,3 +14,17 @@ The workflow is to load the CSV files, clean the product and sales records, crea
 
 ## 5. Expected Outcome
 The completed system should turn inconsistent spreadsheet data into organised database records and useful reports that help Thabo understand product performance and monthly sales trends.
+
+## 6. Inputs, Processing, and Outputs
+
+### Inputs
+The system uses `Products.csv` and `Sales.csv` as its source files. The product file contains product details, while the sales file contains transaction details.
+
+### Processing
+Python and pandas load and clean the records by handling missing values, duplicates, inconsistent categories, date formats, and invalid product references. The cleaned records are stored in related SQLite tables. SQL queries and Python functions calculate sales revenue, product performance, monthly trends, average basket size, and low-stock alerts. Password verification controls access to the reports.
+
+### Outputs
+The system produces a SQLite database named `store.db`, SQL query results, a revenue-per-product bar chart, a monthly sales trend line chart, and business insights documented in the README file.
+
+### Validation
+The application is tested by running `python main.py`. The test checks that authentication, data cleaning, database operations, analysis, and chart generation complete without errors.
